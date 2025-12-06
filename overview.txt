@@ -1,0 +1,24 @@
+
+safe_zone_depth_yolov8_pose.py
+
+Tích hợp Depth Camera (Intel RealSense) vào Safe Zone Alert System
+- Vẽ polygon trên RGB image
+- TỰ ĐỘNG đo depth NGAY KHI VẼ (không cần đóng polygon)
+- Detect người với YOLO pose
+- So sánh depth của keypoints với reference depth
+- Cảnh báo và thông báo qua telegram nếu người VÀO vùng polygon VÀ đủ GẦN theo depth
+
+Requirements:
+    pip install pyrealsense2 ultralytics opencv-python numpy torch requests
+
+
+Controls:
+- Left-click: add point / drag to move point (auto-update depth)
+- Right-click: remove nearest point
+- Space: close polygon
+- 'c': clear polygon
+- 's': save polygon (bao gồm cả depth)
+- 'l': load polygon
+- 't': toggle test mode
+- 'r': toggle depth visualization
+- ESC or 'q': quit
